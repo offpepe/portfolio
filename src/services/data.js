@@ -2,9 +2,8 @@ const data = {
     name: 'Alan Albuquerque F. Lopes',
     age: '21 anos',
     nationality: 'brasileiro',
-    about: `Meu nome é Alan, sou nativo de Corumbá-MS e atualmente moro em Campo Grande-MS(A capital do estado).
-    Gosto de programar desde os meus 16 anos após ser inserido no mundo por um projeto escolar que envolvia lógica de programação, desde então venho me aprofundando no assunto.
-    Agora com a Trybe direcionando todo o conhecimento que tenho, com o objetivo de entrar no mercado.`,
+    about: `Meu nome é Alan, sou nativo de Corumbá-MS e atualmente moro em Campo Grande-MS (A capital do estado).
+    Gosto de programar desde os meus 16 anos após ser inserido nesse mundo por um projeto escolar que envolvia lógica de programação, desde então venho me aprofundando no assunto.`,
     skills: {
       progl:[
           {

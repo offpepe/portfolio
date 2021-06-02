@@ -11,7 +11,7 @@ class ProglList extends Component {
 }
 
 ProglList.propTypes = {
-
+    progl: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default ProglList;

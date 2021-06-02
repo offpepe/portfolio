@@ -5,23 +5,26 @@ import data from '../services/data'
 class About extends Component {
     render() {
         return (
-            <main>
-                <h2> Sobre Mim </h2>
+            <main className="about fade-in">
+                <h2 className="title is-3"> Sobre Mim </h2>
                 <article>
                     <p>{ data.about }</p>
                 </article>
-                <h3> Habilidades </h3>
+                <h3 className="subtitle is-3"> Habilidades </h3>
+                <section>
                 <ul className='prog-list'>
-                    Linguagens de programação
-                    <ProglList progl={data.skills.progl} />
+                    <h4 className="subtitle is-5">Linguagens de programação</h4>
+                    <ProglList className='prog-item' progl={data.skills.progl} />
                 </ul>
-                <ul className='frame-list'>
-                   Frameworks
+                <ul className='prog-list'>
+                   <h4 className="subtitle is-5">Frameworks</h4>
                     <ProglList progl={data.skills.frameWorks} className='prog-list'/>
                 </ul>
-                <ul>
-                    {data.skills.habilities.map((hab) => <li>{ hab }</li>)}
+                <ul className='prog-list'>
+                    <h4 className="subtitle is-5"> Conhecimentos gerais </h4>
+                    {data.skills.habilities.map((hab) => <li key={ hab }>{ hab }</li>)}
                 </ul>
+                </section>
             </main>
         );
     }
