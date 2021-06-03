@@ -18,9 +18,7 @@ class ProjectTabs extends Component {
 }
 
 ProjectTabs.propTypes = {
-  props: PropTypes.shape({
-      handler: PropTypes.func
-  }).isRequired,
+    handler: PropTypes.func.isRequired,
 };
 
 export default ProjectTabs;
