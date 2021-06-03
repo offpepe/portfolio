@@ -71,7 +71,102 @@ const data = {
            path: 'https://www.instagram.com/alanalbuquerq/',
            icon: 'https://img.icons8.com/cute-clipart/64/000000/instagram-new.png'
        },
-    }
+    },
+    
 }
+
+export const projects = [
+  {
+    name: 'Lesson Learned',
+    releaseDate: '23/02/2021',
+    resume: `Este foi o primeiro projeto feito com o conhecimento adquirido na Trybe`,
+    knowledgeUsed: ['HTML','CSS'],
+    imagePath: 'https://jzeroblog.files.wordpress.com/2016/10/38c1b5d.jpg?w=676',
+  },
+  {
+    name: 'Playground Functions',
+    releaseDate: '02/03/2021',
+    resume: 'Neste projeto foram apresentados pequenos problemas com lógica de programação',
+    knowledgeUsed: ['JS'],
+    imagePath: 'https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg',
+  },
+  {
+    name: 'Pixel Art',
+    releaseDate: '09/03/2021',
+    resume: 'Foi o primeiro projeto utilizando HTML e JavaScript com o DOM',
+    knowledgeUsed: ['HTML','CSS','JS'],
+    imagePath: 'https://image.freepik.com/vecteurs-libre/pixel-art-set-papeterie-stylo-isole_150088-355.jpg',
+  },
+  {
+    name: 'To Do List',
+    releaseDate: '10/03/2021',
+    resume: 'Outro projeto utilizando o DOM porém utilizando o localStorage',
+    knowledgeUsed: ['HTML','CSS','JS'],
+    imagePath: 'https://www.wikihow.com/images_en/thumb/3/38/Make-a-To-Do-List-Step-5-Version-3.jpg/v4-460px-Make-a-To-Do-List-Step-5-Version-3.jpg',
+  },
+  {
+    name: 'Meme Generator',
+    releasedDate: '11/03/2021',
+    resume: 'Neste projeto foram utilizadas as tags form e inputs',
+    knowledgeUsed: ['HTML','CSS','JS'],
+    imagePath: 'https://www.memesmonkey.com/images/memesmonkey/58/583d7214c22c5a864c2c65f2e1d82988.jpeg',
+  },
+  {
+    name: 'Facebook SignUp',
+    releaseDate: '22/03/2021',
+    resume: 'Este foi o primeiro projeto em dupla, trabalhando a comunicação e a colaboração',
+    knowledgeUsed: ['HTML','CSS','JS'],
+    imagePath: 'http://www.loginsigninsignup.com/wp-content/uploads/2015/08/www.fb_.com-login-sign-in-fb-account.png',
+  },
+  {
+    name: 'Unit tests',
+    releaseDate: '29/03/2021',
+    resume: 'Aqui foi utilizado o conhecimento adquirido com o conteúdo sobre TDD, utilizando a biblioteca assert',
+    knowledgeUsed: ['JS'],
+    imagePath: 'https://miro.medium.com/max/1024/1*Y07KF-_laqG2cJ1Squ0Bag.png',
+  },
+  {
+    name: 'Zoo Functions',
+    releaseDate: '08/04/2021',
+    resume: 'Similar ao Playground Functions porém com lógicas mais complexas utilizando dados já existentes e principalmente, utilizando HOFs ',
+    knowledgeUsed: ['JS'],
+    imagePath: 'https://miro.medium.com/max/812/1*-kjr_j7fmoQNIGLf8eZIgw.jpeg',
+  },
+  {
+    name: 'Shopping Cart Page',
+    releaseDate: '20/04/2021',
+    resume: 'Utilizando funções assíncronas para montar uma pagina de produtos utilizando a API do mercado livre',
+    knowledgeUsed: ['HTML','CSS','JS'],
+    imagePath: 'https://cms-assets.tutsplus.com/uploads/users/2659/posts/26768/image/eCommerce%20website%20templates%20themeforest.jpg',
+  },
+  {
+    name: 'Jest',
+    releaseDate: '23/04/2021',
+    resume: 'Testes utilizando a framework Jest',
+    knowledgeUsed: ['JS'],
+    imagePath: 'https://user-images.githubusercontent.com/2494410/26874610-2cd5a1c0-4b76-11e7-9520-00f33953592b.png',
+  },
+  {
+    name: 'Movie Cards Library, Stateful e CRUD',
+    releaseDate: '25/05/2021',
+    resume: 'Separado em 3 partes, todos utilizando React, depois trabalhando com as props e o state, e por fim o react-route',
+    knowledgeUsed: ['JS', 'React'],
+    imagePath: 'https://devporai.com.br/wp-content/uploads/2021/01/O-que-e-CRUD-740x414.jpg',
+  },
+  {
+    name: 'FrontEnd Online Store',
+    releaseDate: '14/05/2021',
+    resume: 'Com as competências utilizadas no MovieCards, foi desenvolvido em grupo o frontEnd de uma loja, utilizando o método Kanban',
+    knowledgeUsed: ['React', 'JS', 'CSS'],
+    imagePath: 'https://blog.delogic.com.br/wp-content/uploads/2019/07/original-bc417c88fb8ff99a8b570abef88b0a65-1024x1024.jpg',
+  },
+  {
+    name: 'React Testing Library',
+    releaseDate: '26/05/2021',
+    resume: 'Implementação de testes utilizando a RTL com o jest, fazendo testes unitários e de integração',
+    knowledgeUsed: ['React', 'JS'],
+    imagePath: 'https://miro.medium.com/max/1146/1*xKHUYc6XXS4cUn-_NAwKOA.jpeg',
+  }
+]
 
 export default data;

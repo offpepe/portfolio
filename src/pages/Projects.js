@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ProjectTabs from '../components/ProjectTabs';
+import ProjectList from '../components/ProjectList';
+import { projects } from '../services/data';
 
 class Projects extends Component {
     constructor() {
@@ -18,7 +20,8 @@ class Projects extends Component {
     render() {
         return (
             <main>
-                <ProjectTabs handler={ this.queryChangeHandler }/>
+                <ProjectTabs handler={ this.queryChangeHandler } projects={ projects }/>
+                <ProjectList className="project-list" projects={ projects } />
             </main>
         );
     }
