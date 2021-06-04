@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class ProjectCard extends Component {
     render() {
         const { project } = this.props;
-        const { name, releaseDate, resume, knowledgeUsed, imagePath, module } = project;
+        const { name, releaseDate, resume, knowledgeUsed, imagePath, module, link } = project;
         return (
             <div className='card'>
                 <div className='card-header'>
                     <img className="card-header-icon is-24x24" src={ module.img } alt={ `${module.id} img` } />
-                    <h2 className='card-header-title is-centered'>{ name }</h2>
+                    <Link to={ link } target="blank"><h2 className='card-header-title is-centered'>{ name }</h2></Link>
                     <p className='card-header-subtitle'>{ releaseDate }</p>
                 </div>
                 <img src={ imagePath } className='card-image' alt={`imagem de ${name} project`} />

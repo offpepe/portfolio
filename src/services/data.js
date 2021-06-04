@@ -86,6 +86,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS'],
     imagePath: 'https://jzeroblog.files.wordpress.com/2016/10/38c1b5d.jpg?w=676',
+    link: process.env.PUBLIC_URL + '/projects/Lesson-learned/index.html', 
   },
   {
     name: 'Playground Functions',
@@ -97,6 +98,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS'],
     imagePath: 'https://www.incimages.com/uploaded_files/image/1920x1080/software-computer-code-1940x900_35196.jpg',
+    link: 'https://github.com/tryber/sd-010-a-project-playground-functions/tree/offpepe-project-playground-functions/src',
   },
   {
     name: 'Pixel Art',
@@ -108,6 +110,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'https://image.freepik.com/vecteurs-libre/pixel-art-set-papeterie-stylo-isole_150088-355.jpg',
+    link: process.env.PUBLIC_URL + '/projects/Pixel-art/index.html',
   },
   {
     name: 'To Do List',
@@ -119,6 +122,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'https://www.wikihow.com/images_en/thumb/3/38/Make-a-To-Do-List-Step-5-Version-3.jpg/v4-460px-Make-a-To-Do-List-Step-5-Version-3.jpg',
+    link: process.env.PUBLIC_URL + '/projects/ToDo-list/index.html',
   },
   {
     name: 'Meme Generator',
@@ -130,6 +134,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'https://www.memesmonkey.com/images/memesmonkey/58/583d7214c22c5a864c2c65f2e1d82988.jpeg',
+    link: process.env.PUBLIC_URL + '/projects/Meme-generator/index.html',
   },
   {
     name: 'Facebook SignUp',
@@ -141,6 +146,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'http://www.loginsigninsignup.com/wp-content/uploads/2015/08/www.fb_.com-login-sign-in-fb-account.png',
+    link: process.env.PUBLIC_URL + '/projects/Facebook-signup/index.html',
   },
   {
     name: 'Unit tests',
@@ -152,6 +158,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS'],
     imagePath: 'https://miro.medium.com/max/1024/1*Y07KF-_laqG2cJ1Squ0Bag.png',
+    link: 'https://github.com/tryber/sd-010-a-project-js-unit-tests/tree/offpepe-project-js-unit-tests/tests',
   },
   {
     name: 'Zoo Functions',
@@ -163,6 +170,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS'],
     imagePath: 'https://miro.medium.com/max/812/1*-kjr_j7fmoQNIGLf8eZIgw.jpeg',
+    link: 'https://github.com/tryber/sd-010-a-project-zoo-functions/tree/offpepe-zoo-function-project/test',
   },
   {
     name: 'Shopping Cart Page',
@@ -174,6 +182,7 @@ export const projects = [
     },
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'https://cms-assets.tutsplus.com/uploads/users/2659/posts/26768/image/eCommerce%20website%20templates%20themeforest.jpg',
+    link: process.env.PUBLIC_URL + '/projects/Shoppingcart-page/index.html',
   },
   {
     name: 'Jest',
@@ -185,6 +194,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS'],
     imagePath: 'https://user-images.githubusercontent.com/2494410/26874610-2cd5a1c0-4b76-11e7-9520-00f33953592b.png',
+    link: process.env.PUBLIC_URL + '/projects/NotFound',
   },
   {
     name: 'Movie Cards Library, Stateful e CRUD',
@@ -196,6 +206,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS', 'React'],
     imagePath: 'https://devporai.com.br/wp-content/uploads/2021/01/O-que-e-CRUD-740x414.jpg',
+    link: process.env.PUBLIC_URL + '/projects/NotFound',
   },
   {
     name: 'FrontEnd Online Store',
