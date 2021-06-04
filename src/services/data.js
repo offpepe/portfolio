@@ -106,7 +106,7 @@ export const projects = [
   },
   {
     name: 'Meme Generator',
-    releasedDate: '11/03/2021',
+    releaseDate: '11/03/2021',
     resume: 'Neste projeto foram utilizadas as tags form e inputs',
     knowledgeUsed: ['HTML','CSS','JS'],
     imagePath: 'https://www.memesmonkey.com/images/memesmonkey/58/583d7214c22c5a864c2c65f2e1d82988.jpeg',
