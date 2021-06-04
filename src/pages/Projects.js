@@ -19,7 +19,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <main>
+            <main className="about fade-in">
                 <ProjectTabs handler={ this.queryChangeHandler } projects={ projects }/>
                 <ProjectList className="project-list" projects={ projects } />
             </main>
