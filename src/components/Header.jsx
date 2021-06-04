@@ -6,9 +6,9 @@ class Header extends Component {
         return (
             <header className="header">
                 <nav>
-                    <Link className='button is-rounded is-info is-outlined' to='/'> Inicio </Link>
-                    <Link className='button is-rounded is-info is-outlined' to='/about'> Sobre Mim </Link>
-                    <Link className='button is-rounded is-info is-outlined' to='/projects'> Projetos </Link>
+                    <Link className='button is-rounded is-info is-outlined' to='/portfolio'> Inicio </Link>
+                    <Link className='button is-rounded is-info is-outlined' to='/portfolio/about'> Sobre Mim </Link>
+                    <Link className='button is-rounded is-info is-outlined' to='/portfolio/projects'> Projetos </Link>
                 </nav>
             </header>
         );
