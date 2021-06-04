@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 class ProjectCard extends Component {
     render() {
         const { project } = this.props;
-        const { name, releaseDate, resume, knowledgeUsed, imagePath } = project;
+        const { name, releaseDate, resume, knowledgeUsed, imagePath, module } = project;
         return (
             <div className='card'>
                 <div className='card-header'>
-                    <h2 className='card-header-title'>{ name }</h2>
+                    <img className="card-header-icon is-24x24" src={ module.img } alt={ `${module.id} img` } />
+                    <h2 className='card-header-title is-centered'>{ name }</h2>
                     <p className='card-header-subtitle'>{ releaseDate }</p>
                 </div>
                 <img src={ imagePath } className='card-image' alt={`imagem de ${name} project`} />

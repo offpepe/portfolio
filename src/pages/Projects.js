@@ -8,20 +8,44 @@ class Projects extends Component {
         super();
         this.state = {
             query: '',
+            filteredProjects: projects,
         }
     }
 
-    queryChangeHandler = (e) => {
+    queryChangeHandler = (target) => {
       let { query } = this.state;
-      query = (Object.entries(e.target)[1].pop().query);
+      query = (Object.entries(target)[1].pop().query);
+      this.filterByQuery(query);
       this.setState({ query });
     }
 
+    filterByQuery = (query) => {
+      let { filteredProjects } = this.state;
+      switch (query) {
+          case '':
+            filteredProjects = projects;
+            break;
+          case 'fp':
+            filteredProjects = projects.filter((proj) => proj.module.id === 'fp');
+            break;
+          case 'df':
+            filteredProjects = projects.filter((proj) => proj.module.id === 'df');
+            break;
+          case 'db':
+            filteredProjects = projects.filter((proj) => proj.module.id === 'db');
+            break;
+          default:
+            break;
+      }
+      this.setState({ filteredProjects });
+    }
+
     render() {
+        const { filteredProjects } = this.state;
         return (
             <main className="about fade-in">
-                <ProjectTabs handler={ this.queryChangeHandler } projects={ projects }/>
-                <ProjectList className="project-list" projects={ projects } />
+                <ProjectTabs handler={ this.queryChangeHandler } projects={ projects } />
+                <ProjectList className="project-list" projects={ filteredProjects } />
             </main>
         );
     }

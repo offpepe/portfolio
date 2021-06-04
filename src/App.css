@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 * {
   border: 0;
@@ -45,7 +46,7 @@ body {
 }
 
 .page-landing img {
-  border-radius: 50%;
+  border-radius: 12rem;
   width: 300px;
 }
 
@@ -105,6 +106,8 @@ body {
 }
 
 .tabs li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   margin: 0 20px;
 }
 
@@ -122,13 +125,30 @@ body {
 .card-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 88px;
   margin: 0 10px;
+}
+
+.card-header-icon {
+  width: 80px;
 }
 
 .card-image {
   width: 400px;
   height: 200px;
+}
+
+.tabs li:hover {
+  color: #580f70;
+  text-shadow: 1px 1px #D5E689;
+  text-decoration: underline #485412 ;
+}
+
+.is-active {
+  color: #580f70;
+  text-shadow: 1px 1px #D5E689;
+  text-decoration: underline #D5E68D ;
 }
 
 .fade-in {
@@ -142,11 +162,6 @@ body {
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation fade-in
- * ----------------------------------------
- */
  @-webkit-keyframes fade-in {
   0% {
     opacity: 0;

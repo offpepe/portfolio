@@ -10,7 +10,7 @@ class PageLanding extends Component {
                 <h2 className='title is-3'>{ name }</h2>
                 <p className='subtitle is-4'>{`${age}, ${nationality} `}</p>
                 </section>
-                <img src='https://pbs.twimg.com/profile_images/1242553915650048000/9g_THTxk_400x400.jpg' alt={`foto de ${name}`}/>
+                <img src={ process.env.PUBLIC_URL + '/profile_photo.jpg' } alt={`foto de ${name}`}/>
             </div>
         );
     }
