@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Meme Generator
+        </h1>
+    </header>
+    <main> 
+       <label for="memeTxt">Texto</label>
+       <input type="text" name="memeTxt" id="memeTxt" maxlength="20" required> <br>
+       <label for="memeImg">Imagem</label>
+       <input type="file" name="memeImg" id="memeImg" accept="image/png, .jpeg, .jpg, image/gif">
+       <button id="submit">lansar</button>
+       <div class="box">
+           
+       </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

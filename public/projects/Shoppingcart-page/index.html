@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Carrinho de compras</h1>
+    </header>
+    <section class="container">
+      <div class='loading' id='load'> <p id='msg'>estamos buscando os produtos</p> </div>
+      <section class="items" id='main'>
+      </section>
+      <section class="cart" id='cartId'>
+        <span class="cart__title">Carrinho de compras</span>
+        <button class="empty-cart" id='ccbutton'>Esvaziar carrinho</button>
+        <ol class="cart__items" id='list'></ol>
+        <p id='priceElement' class='total-price'></p>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

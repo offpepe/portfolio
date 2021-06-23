@@ -151,6 +151,89 @@ body {
   text-decoration: underline #D5E68D ;
 }
 
+.productDetails-conteiner {
+  display: flex;
+}
+
+.projectDetails-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectDetails {
+  width: 80%;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.project-details-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.github-conteiner {
+  text-align: center;
+  width: 30%;
+}
+
+.project-conteiner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.project-details-tags {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.know-details {
+  display: flex;
+}
+
+.know-details p {
+  margin: 0 10px;
+}
+
+.project-details-img-module {
+  filter: invert(100%);
+}
+
+.project-details-resume {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  width: 70%;
+}
+
+.project-details-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  width: 90%;
+}
+
+.gitImg {
+  border-radius: 50%;
+}
+
+.gitlink {
+  display: flex;
+  justify-content: stretch;
+}
+
+.card-header-subtitle {
+  font-size: 12px;
+  opacity: 80%;
+}
+
 .fade-in {
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

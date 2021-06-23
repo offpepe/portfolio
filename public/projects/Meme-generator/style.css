@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 15px 15px;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    margin: 30px;
+}
+
+.box {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    background-size:cover;
+    
+}
+
+#imgOutput {
+    z-index: -1;
+}
+
+#submit {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.txt {
+    z-index: 1;
+    font-family: fantasy;
+    font-weight: 800;
+    font-size:80px;
+    text-shadow:3px 3px yellowgreen;
+    color: blueviolet;
+    overflow:hidden;   
+}
