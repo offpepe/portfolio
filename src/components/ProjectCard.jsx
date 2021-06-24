@@ -32,7 +32,7 @@ class ProjectCard extends Component {
                 { renderInfo && <div className={ `project-card-header ${infoClass}` }>
                     <img className="module-icon" src={ module.img } alt={ `${module.id} img` } />
                     <h2 className='card-header-title is-centered project-title'>{ name }</h2>
-                    <p className='card-header-subtitle project-title'> Clique para ver detalhes </p>
+                    <p className='card-header-subtitle project-instruction'> Clique para ver detalhes </p>
                 </div>}
                 <img src={ imagePath } className='card-image' alt={`imagem de ${name} project`} />
                 </Link>

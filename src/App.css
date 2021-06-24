@@ -238,6 +238,11 @@ body {
   justify-content: stretch;
 }
 
+.project-instruction {
+  color: white;
+  padding-bottom: 10px;
+}
+
 .project-details-icon {
   display: flex;
   flex-direction: column;
@@ -246,7 +251,6 @@ body {
 
 .card-header-subtitle {
   font-size: 12px;
-  opacity: 80%;
 }
 
 .contact {
@@ -317,7 +321,7 @@ body {
 }
 
 .alert-success {
-  color: green;
+  color: white;
   font-family: 'Oswald', sans-serif;
 }
 
