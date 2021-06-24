@@ -45,7 +45,16 @@ class Projects extends Component {
         return (
             <main className="about fade-in">
                 <ProjectTabs handler={ this.queryChangeHandler } projects={ projects } />
-                <ProjectList className="project-list" projects={ filteredProjects } />
+                {filteredProjects.length > 0 ? 
+                <ProjectList className="project-list" projects={ filteredProjects } /> :
+                  <div className="no-proj-message">
+                  <p>
+                    Ainda não há projetos aqui, mas estou trabalhando nisso!<br/>
+                  </p>
+                    <div className="message-icons">
+                      <i class="fas fa-hard-hat"/><i class="fas fa-toolbox"/><i class="fas fa-tools"/>
+                      </div>
+                  </div>}
             </main>
         );
     }

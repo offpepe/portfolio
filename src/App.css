@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 * {
@@ -323,6 +324,19 @@ body {
 .alert-success {
   color: white;
   font-family: 'Oswald', sans-serif;
+}
+
+.no-proj-message {
+  color: #585858;
+  font-family: 'Staatliches', cursive;
+  font-size: 20px;
+  text-shadow: 1px 1px #454545;
+  text-align: center;
+}
+
+.message-icons i {
+  font-size: 30px;
+  margin: 0px 10px;
 }
 
 .fade-in {
