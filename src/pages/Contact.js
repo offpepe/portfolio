@@ -111,6 +111,7 @@ class Contact extends Component {
                             name="from_name"
                             className="input is-primary"
                             placeholder="Seu nome"
+                            required
                             onChange={ this.handleChange }
                            />
                            <span className="icon is-small is-left">
@@ -123,6 +124,7 @@ class Contact extends Component {
                             name="to_name"
                             className="input is-primary"
                             placeholder="Seu e-mail"
+                            required
                             onChange={ this.handleChange }
                           />
                           <span className="icon is-small is-left">
@@ -132,6 +134,7 @@ class Contact extends Component {
                       <label htmlFor="message">
                       <textarea
                         name="message"
+                        required
                         className="textarea is-primary"
                         placeholder="Escreva sua mensagem aqui."
                         onChange={ this.handleChange }
