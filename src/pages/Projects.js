@@ -15,11 +15,11 @@ class Projects extends Component {
     queryChangeHandler = (target) => {
       let { query } = this.state;
       query = (Object.entries(target)[1].pop().query);
-      this.filterByQuery(query);
+      this.filterByModule(query);
       this.setState({ query });
     }
 
-    filterByQuery = (query) => {
+    filterByModule = (query) => {
       let { filteredProjects } = this.state;
       switch (query) {
           case '':

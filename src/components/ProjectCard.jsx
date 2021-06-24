@@ -3,20 +3,39 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class ProjectCard extends Component {
+    constructor() {
+      super();
+      this.state = {
+        renderInfo: false,
+        infoClass: '',
+      }
+      this.showProjectInfo = this.showProjectInfo.bind(this);
+      this.removeProjectInfo = this.removeProjectInfo.bind(this);
+    }
+
+    showProjectInfo(e) {
+      this.setState({ renderInfo: true, infoClass: 'fade-in-card-info' });
+    }
+
+    removeProjectInfo(e) {
+        this.setState({ renderInfo: true, infoClass: 'fade-out' });
+      }
+
     render() {
         const { project } = this.props;
-        const { name, releaseDate, knowledgeUsed, imagePath, module } = project;
+        const { renderInfo, infoClass } = this.state;
+        const { name, imagePath, module } = project;
+        const pathName = name.split(' ').join('-');
         return (
-            <div className='card'>
-                <div className='card-header'>
-                    <img className="card-header-icon is-24x24" src={ module.img } alt={ `${module.id} img` } />
-                    <Link to={ `/${name}` } ><h2 className='card-header-title is-centered'>{ name }</h2></Link>
-                    <p className='card-header-subtitle'>{ releaseDate }</p>
-                </div>
+            <div className='card' onMouseOver={ this.showProjectInfo } onMouseOut={ this.removeProjectInfo }>
+                <Link to={ `/portfolio/projects/${pathName}` } >
+                { renderInfo && <div className={ `project-card-header ${infoClass}` }>
+                    <img className="module-icon" src={ module.img } alt={ `${module.id} img` } />
+                    <h2 className='card-header-title is-centered project-title'>{ name }</h2>
+                    <p className='card-header-subtitle project-title'> Clique para ver detalhes </p>
+                </div>}
                 <img src={ imagePath } className='card-image' alt={`imagem de ${name} project`} />
-                <div className="card-footer">
-                {knowledgeUsed.map((knowledge, index) => <p key={ index } className="card-footer-item">{ knowledge }</p>)}
-                </div>
+                </Link>
             </div>
         );
     }

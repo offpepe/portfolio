@@ -8,10 +8,12 @@ class GitCard extends Component {
             <div className="card">
               <div className="card-header">
                   <h1 className="card-header-title">{ gitInfo.name }</h1>
-                  <p className="card-header-subtitle">{ gitInfo.login }</p>
-                  <img src={ gitInfo.avatar_url } className="card-header-icon gitImg" alt={ `Imagem de ${gitInfo.name}` } />
+                  <figure className="card-header-icon project-details-icon">
+                    <img src={ gitInfo.avatar_url } className="gitImg" alt={ `Imagem de ${gitInfo.name}` } />
+                    <p className="card-header-subtitle">{ gitInfo.login }</p>
+                  </figure>
               </div>
-              <p  className="card-content" >{ gitInfo.bio }</p>
+              { gitInfo.bio !== null && <p className="card-content" >{ gitInfo.bio }</p>}
               <div className="card-footer">
                 <a href={ gitInfo.html_url } target="_blank" rel="noreferrer" className="card-footer-item">
                     Perfil
@@ -23,7 +25,7 @@ class GitCard extends Component {
 }
 
 GitCard.propTypes = {
-  gitInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  gitInfo: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default GitCard;

@@ -2,8 +2,8 @@ const data = {
     name: 'Alan Albuquerque F. Lopes',
     age: '21 anos',
     nationality: 'brasileiro',
-    about: `Meu nome é Alan, sou nativo de Corumbá-MS e atualmente moro em Campo Grande-MS (A capital do estado).
-    Gosto de programar desde os meus 16 anos após ser inserido nesse mundo por um projeto escolar que envolvia lógica de programação, desde então venho me aprofundando no assunto.`,
+    about: `Meu nome é Alan, sou nativo de Corumbá-MS e atualmente moro em Campo Grande-MS, capital do estado.
+    Gosto de programar desde os meus 16 anos, após ser inserido nesse mundo por meio de um projeto escolar que envolvia lógica de programação, e desde então venho me aprofundando no assunto.`,
     skills: {
       progl:[
           {
@@ -31,27 +31,31 @@ const data = {
           {
               name: 'React',
               icon: 'https://img.icons8.com/office/80/000000/react.png',
-              level: '4/5'
+              level: '4/5',
           },
           {
-              name: 'Bulma',
-              icon: 'https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png',
-              level: '5/5'
+              name: 'Redux',
+              icon: 'https://img.icons8.com/color/48/000000/redux.png',
+              level: '4/5',
           },
           {
               name: 'Jest',
               icon: 'https://img.icons8.com/emoji/96/000000/joker-.png',
               level: '4/5',
           },
+          {
+            name: 'Bulma',
+            icon: 'https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png',
+            level: '5/5'
+          },
       ],
       habilities: [
-          'Conhecimento e experiência com lógica de programação',
           'Experiência com programação orientada ao Objeto',
           'Inglês avançado',
           'Conhecimento Avançado em HTML e CSS',
           'Experiência em montagem e edição com pacote Adobe',
-          'Noção em TDD',
-          'Noção em metodologias ágeis',
+          'Conhecimento e experiência com TDD',
+          'Conhecimento e experiência em metodologias ágeis, principalemente o método Kanban',
       ]
     },
     network: {
@@ -209,7 +213,7 @@ export const projects = [
     },
     knowledgeUsed: ['JS', 'Jest'],
     imagePath: 'https://user-images.githubusercontent.com/2494410/26874610-2cd5a1c0-4b76-11e7-9520-00f33953592b.png',
-    repoLink: 'https://github.com/tryber/sd-010-a-project-jest',
+    repoLink: 'https://github.com/tryber/sd-010-a-project-jest/tree/offpepe-project-jest',
     appLink: 'not-found',
   },
   {
@@ -270,6 +274,19 @@ export const projects = [
     appLink: 'not-found',
   },
   {
+    name: 'React Chronometer',
+    releaseDate: '07/06/2021',
+    resume: 'Aplicação feita para marcar pequenos intervalos durante as aulas, visando trabalhar com tempo e lógica de tempo em minutos, segundos e horas',
+    module: {
+      id: 'df',
+      img: 'https://img.icons8.com/ios-filled/50/000000/programming.png',
+    },
+    knowledgeUsed: ['React', 'JS', 'CSS'],
+    imagePath: process.env.PUBLIC_URL + '/projects/React-chronometer/react-chronometer.jpg',
+    repoLink: 'https://github.com/offpepe/React-chronometer',
+    appLink: 'https://offpepe.github.io/React-chronometer/',
+  },
+  {
     name: 'Trybe Wallet',
     releaseDate: '09/06/2021',
     resume: 'Aqui foi feito a estrutura de um site de finanças, utilizando Redux para estruturar dados e o Redux-thunk para lidar com requisições assíncronas',
@@ -277,7 +294,7 @@ export const projects = [
       id: 'df',
       img: 'https://img.icons8.com/ios-filled/50/000000/programming.png',
     },
-    knowledgeUsed: ['React', 'Redux', 'JS','Jest'],
+    knowledgeUsed: ['React', 'Redux', 'JS','Jest', 'CSS'],
     imagePath: process.env.PUBLIC_URL + '/projects/TryWallet/trywallet-login.png',
     repoLink: 'https://github.com/tryber/sd-010-a-project-trybewallet/tree/offpepe-project-trybewallet', 
     appLink: 'not-found',
@@ -307,11 +324,14 @@ export const projects = [
       id: 'df',
       img: 'https://img.icons8.com/ios-filled/50/000000/programming.png',
     },
-    knowledgeUsed: ['React', 'Redux', 'JS', 'Cypress'],
+    knowledgeUsed: ['React', 'Redux', 'JS', 'Cypress', 'CSS'],
     imagePath: process.env.PUBLIC_URL + '/projects/Shipit-trivia/shipit-login.png',
     repoLink: 'https://github.com/offpepe/shipit-trivia',
     appLink: 'https://shipit-trivia.netlify.app/',
   }
 ]
+
+
+
 
 export default data;

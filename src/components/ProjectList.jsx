@@ -7,7 +7,13 @@ class ProjectList extends Component {
         const { projects } = this.props;
         return (
             <div className="project-list">
-                {projects.map((project, index) => <ProjectCard key={ index } project={ project }/>)}
+                {projects
+                .sort((a , b) => {
+                 a = a.releaseDate.split('/')
+                 b = b.releaseDate.split('/')
+                 return b[2] - a[2] || b[1] - a[1] || b[0] - a[0];
+                })
+                .map((project, index) => <ProjectCard key={ index } project={ project }/>)}
             </div>
             );
     }

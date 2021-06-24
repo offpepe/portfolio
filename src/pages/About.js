@@ -20,10 +20,10 @@ class About extends Component {
                    <h4 className="subtitle is-5">Frameworks</h4>
                     <ProglList progl={data.skills.frameWorks} className='prog-list'/>
                 </ul>
-                <ul className='prog-list'>
+                <ol className='prog-list misc'>
                     <h4 className="subtitle is-5"> Conhecimentos gerais </h4>
                     {data.skills.habilities.map((hab) => <li key={ hab }>{ hab }</li>)}
-                </ul>
+                </ol>
                 </section>
             </main>
         );
