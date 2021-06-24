@@ -1,0 +1,240 @@
+@font-face {
+  font-family: Klavika-bold;
+  src: url('src/fonts/ufonts.com_klavika-bold-opentype.otf');
+}
+
+@font-face {
+  font-family: Klavika-light;
+  src: url('src/fonts/klavika-light.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(0deg, #4267b2 -90%, white 100%) no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: #4267b2;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+}
+
+.facebook-logo {
+  width: 170px;
+}
+
+.facebook-login {
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+.email {
+  margin-right: 10px;
+  margin-bottom: 22px;
+}
+
+button {
+  border: solid 1px black;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 45px;
+  height: 22px;
+  background-color: rgb(166, 149, 240);
+  color: white;
+}
+
+a {
+  color: rgb(166, 149, 240);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.form-group {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  align-self: flex-end;
+}
+
+.main-content {
+  display: flex;
+}
+
+.left-content {
+  justify-self: flex-end;
+  margin: 30px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-content {
+  font-family: Klavika-bold, monospace;
+  margin-top: 50px;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.flexDirection {
+  display: flex;
+}
+
+#birthConteiner {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#birthConteiner input {
+  text-align: center;
+  border: 1px solid #b5c0d2;
+  border-radius: 6%;
+}
+
+#birthConteiner input::placeholder {
+  font-size: 17px;
+  font-family: Klavika-light, monospace;
+}
+
+#emailBox input , #passwordBox input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  font-size: 17px;
+  border-radius: 6%;
+  border: 1px solid #b5c0d2;
+  font-family: Klavika-light, monospace;
+  padding-left: 5px;
+}
+
+#formOpenAcc input {
+  height: 30px;
+}
+
+#nameBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+#nameBox input {
+  width: 47%;
+  height: 30px;
+  border-radius: 5%;
+  font-size: 17px;
+  border: 1px solid #b5c0d2;
+  padding-left: 5px;
+}
+
+#facebook-register {
+  width: auto;
+  margin: 10px 0;
+  padding: 20px 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 0px;
+  background-color: #59984b;
+  border-radius: 6%;
+  border: 1px solid #b5c0d2;
+  text-shadow: 1px 1px darkslategrey;
+}
+
+#genderCustom::placeholder {
+  padding-left: 5px;
+}
+
+.alertlog {
+  color: red;
+}
+
+.welcome {
+  margin-top: 100px;
+  color: rgb(32, 32, 32);
+  font-size: 30px;
+}
+
+#facebook-slogan {
+  font-family: Klavika-bold, monospace;
+  font-size: 20px;
+  color: #103253;
+  width: 50%;
+  align-self: center;
+}
+
+.left-content figure {
+  align-self: center;
+  margin-left: 80px;
+}
+
+#genderBox {
+  font-family: Klavika-bold, monospace;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  flex-flow: wrap;
+}
+
+#genderBox input {
+  margin-left: 10px;
+}
+
+#genderBox label {
+  margin: 0 5px;
+  flex-wrap: wrap;
+}
+
+footer {
+  margin-top: 150px;
+  background-color: white;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer h3 {
+  font-family: Klavika-light, monospace;
+  margin-left: 20px;
+}
+
+#dev-networking {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#alan {
+  border-bottom: 3px solid #b5c0d2;
+}
+
+#alan , #getulio {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-between;
+  width: 20%;
+}
+
+#dev-networking img {
+  width: 50px;
+}
