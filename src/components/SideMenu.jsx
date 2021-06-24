@@ -16,7 +16,7 @@ class SideMenu extends Component {
         </li>
       </ul>
       <p className="menu-label">
-        Tipo
+        Tipo de projeto
       </p>
       <ul className="menu-list">
         <li><p> Individual </p></li>
