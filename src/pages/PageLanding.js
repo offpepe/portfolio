@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PageLanding () {
         return (
@@ -12,29 +13,31 @@ export default function PageLanding () {
                     <p className='subtitle profile-card-subtitle'>Não há saber mais ou saber menos: há saberes diferentes</p>
                 </section>
                 <nav className="page-landing-nav">
-                    <button className="button is-success rounded">
-                      <a href="https://github.com/offpepe"
+                <a href="https://github.com/offpepe"
                         target="_blank"
                         rel="noreferrer"
                         style={ { textDecoration: 'none', color: 'white' } }
                       >
-                          <i className="fab fa-github" />
+                        <button className="button is-success rounded">
+                              <i className="fab fa-github" />
+                        </button>
                       </a>
-                    </button>
-                    <button className="button is-success rounded">
                     <a href="https://www.linkedin.com/in/alanalbuquerq/ "
                         target="_blank"
                         rel="noreferrer"
                         style={ { textDecoration: 'none', color: 'white' } }
                       >
+                    <button className="button is-success rounded">
                       <i className="fab fa-linkedin-in"/>
+                    </button>
                     </a>
-                    </button>
+                    <Link to="portfolio/projects">
                     <button className="button is-success rounded">
-                        <i class="fas fa-cog" />
+                        <i className="fas fa-cog" />
                     </button>
+                        </Link>
                     <button className="button is-success rounded">
-                            <i class="fas fa-envelope-open" />
+                            <i className="fas fa-envelope-open" />
                     </button>
                 </nav>
             </div>
