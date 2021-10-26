@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import PageLanding from './pages/PageLanding';
 import ProjectCarrousel from './pages/ProjectsCarrousel';
 import './App.css';
@@ -9,6 +9,7 @@ function App() {
   <>
    <BrowserRouter>
     <Switch>
+    <Route exact path="/"><Redirect to="/portfolio"/></Route>
       <Route exact path="/portfolio" component={ PageLanding }/>
       <Route exact path="/portfolio/projects" component={ ProjectCarrousel }/> 
       <Route exact path="/portfolio/contact" component={ Contact }/> 
