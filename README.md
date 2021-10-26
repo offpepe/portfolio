@@ -1,5 +1,3 @@
 # Portfolio
 
-## Aqui é onde eu apresento um pouco sobre mim e minha carreira em game dev
----
-#🐱‍💻
+## Here's where i show important things about me, not too mutch, but when you see, i'll know where find me
