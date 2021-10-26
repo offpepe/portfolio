@@ -36,9 +36,12 @@ export default function PageLanding () {
                         <i className="fas fa-cog" />
                     </button>
                         </Link>
-                    <button className="button is-success rounded">
-                            <i className="fas fa-envelope-open" />
-                    </button>
+                    
+                    <Link to="portfolio/contact">
+                      <button className="button is-success rounded">
+                              <i className="fas fa-envelope-open" />
+                      </button>
+                    </Link>
                 </nav>
             </div>
         );

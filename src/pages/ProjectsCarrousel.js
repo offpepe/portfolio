@@ -1,45 +1,56 @@
-import { Dropdown } from 'react-bootstrap';
-import React from 'react';
+/* eslint-disable valid-typeof */
+import React, { useState } from 'react';
+import ProjectCard from '../components/ProjectCard';
 import  './css/ProjectsCarrousel.css';
 
 export default function ProjectCarrousel () {
-        return (
-            <div className="project-card">
-                <figure className="project-card-cover">
-                    <img src="https://www.seekpng.com/png/detail/137-1379498_work-in-progress.png" alt="project cover" />
-                </figure>
-                <section className="project-card-body">
-                    <h3 className="title is-3"> Project Name </h3>
-                    <article className="project-card-purpose">
-                    <h5 className="subtitle is-4"> Propósito </h5>
-                    <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum  </p>
-                    </article>
-                    <nav className="project-card-nav">
-                    { ['Front-end', 'Back-end', 'CS'].map((stack) => <button className="button is-primary rounded">{ stack }</button>) }
-                    <div class="dropdown is-active">
-                     <div class="dropdown-trigger">
-                        <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu2">
-                        <span>Tech Stack</span>
-                        <span class="icon is-small" >
-                          <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                        </button>
-                        <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                <p>You ca   n insert <strong>any type of content</strong> within the dropdown menu.</p>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                    </div>
-                    </nav>
-                    <footer className="project-card-footer">
-                    <button className="button is-success rounded"> Repo </button>
-                    <button className="button is-success rounded"> App </button>
-                    </footer>
-                </section>
-
-            </div>
-        );
+    const [proj, setProj] = useState(0)
+    const projectsMock = [
+        {
+            name: 'Agiota Finder',
+            purpose: 'Ajuda pessoas que não tem dinheiro e crédito na praça à achar um agiota da região',
+            stack: ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS', 'Express'],
+            tech: ['Front-end', 'Back-end'],
+            repo: [{ of: 'Back-end', link: 'https://github.com' }, { of: 'Front-end', link: 'https://tiktok.com/' }],
+            cover: 'https://pbs.twimg.com/media/ETkS_koWoAADjzz.jpg',
+            app: 'https://www.facebook.com/'
+        },
+        {
+            name: 'Castra Map',
+            purpose: 'Encontra postos de castração, com filtros de preço, distancia e etc',
+            stack: ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS', 'Express'],
+            tech: ['Front-end', 'Back-end'],
+            repo: [{ of: 'Back-end', link: 'https://github.com' }, { of: 'Front-end', link: 'https://tiktok.com/' }],
+            cover: 'https://previews.123rf.com/images/coffeeein/coffeeein1702/coffeeein170200112/71669838-animal-map-for-kid-world-vector-poster-for-children-cute-illustrated-preschool-cartoon-globe-with-an.jpg',
+            app: 'https://castracao.campogrande.ms.gov.br/#/(ccz:inicial)'
+        }
+    ]
+    const handleNextProjects = () => {
+        if(proj < projectsMock.length - 1) {
+            console.log(proj)
+            setProj(proj+1)
+        }
+    }
+    const handlePreviousProjects = () => {
+        if(proj > 0) {
+            setProj(proj-1)
+        }
+    }
+    return (
+        <div style={ { display: 'flex', alignItems: 'center' } }>
+        <span 
+              style={ { margin: '0px 20px', fontSize: '30px' } } 
+              onClick={ () => handlePreviousProjects() }
+            >
+            <i className="fas fa-chevron-left"/>
+        </span>
+        <ProjectCard project={ projectsMock[proj] }/>
+        <span 
+              style={ { margin: '0px 20px', fontSize: '30px' } } 
+              onClick={ () => handleNextProjects() }
+            >
+            <i className="fas fa-chevron-right"/>
+        </span>
+        </div>
+    );
 }
