@@ -9,9 +9,9 @@ function App() {
   <>
    <BrowserRouter>
     <Switch>
-      <Route exact path="/portfolio" component={ PageLanding }/>
-      <Route exact path="/portfolio/projects" component={ ProjectCarrousel }/> 
-      <Route exact path="/portfolio/contact" component={ Contact }/> 
+      <Route exact path="/" component={ PageLanding }/>
+      <Route exact path="/projects" component={ ProjectCarrousel }/> 
+      <Route exact path="/contact" component={ Contact }/> 
     </Switch>
    </BrowserRouter>
   </>
