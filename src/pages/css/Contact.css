@@ -4,7 +4,7 @@
   border: 1px 1px solid black;
   border-radius: 10%;
   display: flex;
-  filter: drop-shadow(0 0 0.75rem #77ED98);
+  filter: drop-shadow(0 0 0.35rem #F0E748);
   height: 400px;
   justify-content: center;
   width: 700px;

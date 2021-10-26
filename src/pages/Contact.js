@@ -38,7 +38,7 @@ export default function Contact () {
   }
 
     return (
-      <main className="contact-main">
+      <main className="contact-main fade-in">
         <div className="contact-textContent">
           <h3 className="title is-3" style={ { fontWeight: 100, fontSize: '35px' } }>
             Deixe uma mensagem!

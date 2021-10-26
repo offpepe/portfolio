@@ -37,7 +37,7 @@ export default function ProjectCarrousel () {
         }
     }
     return (
-        <div style={ { display: 'flex', alignItems: 'center' } }>
+        <div style={ { display: 'flex', alignItems: 'center' }} className="fade-in">
         <span 
               style={ { margin: '0px 20px', fontSize: '30px' } } 
               onClick={ () => handlePreviousProjects() }
