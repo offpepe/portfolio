@@ -1,0 +1,30 @@
+.contact-main {
+  align-items: center;
+  background-color: #494747;
+  border: 1px 1px solid black;
+  border-radius: 10%;
+  display: flex;
+  filter: drop-shadow(0 0 0.35rem #F0E748);
+  height: 400px;
+  justify-content: center;
+  width: 700px;
+}
+
+.contact-textContent {
+    height: 88%;
+    border-width: 0 0 0 4px;
+    border-style: dashed;
+    margin-right: 5%;
+    text-align: center;
+    transform: scale(-1, -1);
+    writing-mode: vertical-rl;
+}
+
+.contact-textContent h3 {
+    margin: 0 5px;
+}
+
+.contact-form {
+  width: 50%;
+}
+

@@ -1,153 +1,96 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
-import data from '../services/data';
+import './css/Contact.css';
 
-class Contact extends Component {
-    constructor() {
-      super();
-      this.state = {
-        from_name :'',
-        to_name: '',
-        message: '',
+export default function Contact () {
+  const [serviceId] = useState('service_efrtl4t');
+  const [template] = useState('template_v9n3zab');
+
+  useEffect(() => {
+    emailjs.init('user_GDIZ7XgctjBwTeSRZHpZO');
+  }, []);
+
+  const sendEmail = async (email, name, message, subject) => {
+    const sendBtn = document.getElementsByClassName('send-btn')[0];
+    if(email && name && message) {
+      const params = {
+        from_name: (subject ? `${name}  - Assunto: ${subject}` : name),
+        to_name: email,
+        message,
         reply_to: 'alan.alb.flopes@gmail.com',
       }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.renderAlert = this.renderAlert.bind(this);
-    }
-
-    handleSubmit(e) {
-      e.preventDefault();
-      const serviceID = 'service_efrtl4t';
-      const templateID = 'template_v9n3zab';
-      const templateParams = { ...this.state };
-      const buttonSubmit = document.getElementById('submit-btn');
-      buttonSubmit.classList.add('is-loading');
-      emailjs.send(serviceID, templateID, templateParams)
-        .then(() => {
-            buttonSubmit.classList.remove('is-loading');
-            buttonSubmit.classList.remove('is-primary');
-            buttonSubmit.classList.add('is-success');
-            buttonSubmit.innerText = 'Enviado!'
-            this.renderAlert('success');
-            setTimeout(() => {
-                buttonSubmit.classList.remove('is-success');
-                buttonSubmit.classList.add('is-primary');
-                buttonSubmit.innerText = 'Enviar'
-            }, 1000);
-        })
-        .catch((err) => {
-            buttonSubmit.classList.remove('is-loading');
-            buttonSubmit.classList.remove('is-primary');
-            buttonSubmit.classList.add('is-danger');
-            buttonSubmit.innerText = 'Erro!'
-            this.renderAlert('error', err);
-            setTimeout(() => {
-                buttonSubmit.classList.remove('is-danger');
-                buttonSubmit.classList.add('is-primary');
-                buttonSubmit.innerText = 'Enviar'
-            }, 1000);
-        });
-    }
-
-    componentDidMount() {
-        emailjs.init('user_GDIZ7XgctjBwTeSRZHpZO');
-    }
-
-    renderAlert(type, err = null) {
-      switch (type) {
-          case 'success':
-            return this.setState(
-              {
-                alert: () => <span className="alert-success"><p> Email enviado! </p></span>
-              },() => setTimeout(() => this.setState ({ alert: undefined }), 2000));
-          case 'error':
-            return  this.setState(
-              {
-                alert: () => <span className="alert-error"><p>{ `Erro! ${err}` }</p></span>
-              }, () => setTimeout(() => this.setState ({ alert: undefined }), 2000));
-          default:
-              return  this.setState(
-                  {
-                    alert: () => <span className="alert-error"><p>O maior ser vivo do mundo é um fungo!</p></span>
-                  }, () => setTimeout(() => this.setState ({ alert: undefined }), 2000));
+      try {
+        sendBtn.classList.add('is-loading');
+        await emailjs.send(serviceId, template, params);
+        sendBtn.classList.remove('is-loading');
+        sendBtn.classList.remove('is-success');
+        sendBtn.classList.add('is-primary');
+        sendBtn.innerHTML = "Enviado!"
+        setTimeout(() => sendBtn.innerHTML = "Enviar", 800);
+      } catch (err) {
+        sendBtn.classList.remove('is-success');
+        sendBtn.classList.add('is-danger');
+        sendBtn.innerHTML = "Erro!"
+        alert(err);
+        setTimeout(() => sendBtn.innerHTML = "Enviar", 800);
       }
     }
+  }
 
-    handleChange(e) {
-     this.setState({
-       [e.target.name]: e.target.value,
-     });
-    }
-
-    render() {
-        const { alert } = this.state;
-        return (
-          <main className="contact fade-in">                
-            <section className="contact-content">
-                <section className="contact-networks-conteiner">
-                <h2 className="contact-title"> Entre em contato </h2>
-                  <div className="contact-networks">
-                  <a href={ data.network.github.path } target="_blank" rel="noreferrer">
-                    <i className="content-icons fab fa-github"/>
-                  </a>
-                  <a href={ data.network.linkedin.path } target="_blank" rel="noreferrer">
-                    <i className="content-icons fab fa-linkedin"/>
-                  </a>
-                  <a href={ data.network.twitter.path } target="_blank" rel="noreferrer">
-                    <i className="content-icons fab fa-twitter-square"/>
-                  </a>
-                  <a href={ data.network.instagram.path } target="_blank" rel="noreferrer">
-                    <i className="content-icons fab fa-instagram"/>
-                  </a>
-                  </div>
-                </section>
-                <section className="contact-form-sec">
-                    <form className="form-contact" onSubmit={ this.handleSubmit }>
-                      <label htmlFor="from_name" className="control has-icons-left has-icons-right">
-                          <input
-                            type="text"
-                            maxLength="15"
-                            name="from_name"
-                            className="input is-primary"
-                            placeholder="Seu nome"
-                            required
-                            onChange={ this.handleChange }
-                           />
-                           <span className="icon is-small is-left">
-                             <i className="fas fa-user"/>
-                           </span>
-                      </label>
-                      <label htmlFor="to_name" className="control has-icons-left has-icons-right">
-                          <input
-                            type="email"
-                            name="to_name"
-                            className="input is-primary"
-                            placeholder="Seu e-mail"
-                            required
-                            onChange={ this.handleChange }
-                          />
-                          <span className="icon is-small is-left">
-                            <i className="fas fa-envelope"/>
-                          </span>
-                      </label>
-                      <label htmlFor="message">
-                      <textarea
-                        name="message"
-                        required
-                        className="textarea is-primary"
-                        placeholder="Escreva sua mensagem aqui."
-                        onChange={ this.handleChange }
-                      />
-                      </label>
-                      <button type="submit" id="submit-btn" className="button is-primary" > Enviar </button>
-                    </form>
-                </section>
-            </section>
-              { alert && alert() }
-          </main>
-        );
-    }
+    return (
+      <main className="contact-main fade-in">
+        <div className="contact-textContent">
+          <h3 className="title is-3" style={ { fontWeight: 100, fontSize: '35px' } }>
+            Deixe uma mensagem!
+          </h3>
+        </div>
+        <form
+          className="control contact-form"
+          onSubmit={ async (ev) => {
+            ev.preventDefault();
+            const { email, subject, name, message } = ev.target;
+            await sendEmail(email.value, name.value, message.value, subject.value);
+          } }
+          >
+          <div class="control has-icons-left has-icons-right">
+          <input
+            style={ { marginBottom: '5px' } }
+            className="input is-hovered is-medium"
+            name="email"
+            type="email"
+            placeholder="contact.me@mail.com.js"
+            required
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+          <input
+            style={ { marginBottom: '5px' } }
+            className="input is-hovered is-medium"
+            name="name"
+            type="text"
+            placeholder="Seu nome"
+            required
+            />
+          <input
+          style={ { marginBottom: '5px' } }
+          className="input is-hovered is-medium"
+          name="subject"
+          type="text"
+          placeholder="Assunto"
+          />
+          <textarea 
+            className="textarea is-info is-medium"
+            name="message"
+            placeholder="Escreva sua mensagem"
+            required
+          />
+          <button
+            className="button is-success send-btn"
+            type="submit"
+            > Enviar </button>
+        </form>
+      </main>
+    );
 }
-
-export default Contact;
