@@ -46,7 +46,7 @@ export default function ProjectCard ({ project: { name, purpose, stack, tech, re
                 </button>
                 <div className="dropdown-menu" id="dropdown-menu2" role="menu">
                     <div className="dropdown-content" style={ { width: '70%' } }>
-                    <ul style={ { textAlign: 'center', color: 'black' } }>
+                    <ul style={ { textAlign: 'center', color: 'black', height: '150px', overflowY: 'scroll' } }>
                         { stack
                           .map((tech, index) => (
                                 <li>
