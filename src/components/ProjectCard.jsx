@@ -46,12 +46,12 @@ export default function ProjectCard ({ project: { name, purpose, stack, tech, re
                 </button>
                 <div className="dropdown-menu" id="dropdown-menu2" role="menu">
                     <div className="dropdown-content" style={ { width: '70%' } }>
-                    <ul style={ { textAlign: 'center' } }>
+                    <ul style={ { textAlign: 'center', color: 'black' } }>
                         { stack
-                          .map((tech) => (
+                          .map((tech, index) => (
                                 <li>
                                 { tech }
-                                <span className="dropdown-divider" />
+                                { index !== stack.length -1 && <span className="dropdown-divider" /> }
                                     </li>
                             )) }
                     </ul>

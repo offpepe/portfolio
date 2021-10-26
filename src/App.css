@@ -50,6 +50,8 @@ body {
 
 .page-lading-body img {
   border-radius: 50%;
+  height: 250px;
+  object-fit: cover;
   width: 250px;
 }
 

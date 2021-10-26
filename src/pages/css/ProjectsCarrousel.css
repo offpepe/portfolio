@@ -14,7 +14,6 @@
 .project-card-cover {
     height: 50%;
     position: fixed;
-    width: 100%;
 }
 
 .project-card-cover img {
@@ -37,7 +36,7 @@
     align-items: center;
     display: flex;
     justify-content: space-around;
-    margin: 40px 0 0 0;
+    margin: 10px 0 0 0;
     width: 100%;
 }
 
