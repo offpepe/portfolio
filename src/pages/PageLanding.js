@@ -58,7 +58,7 @@ export default function PageLanding () {
                     </button>
                     </a>
                     <Link
-                      to="portfolio/projects"
+                      to="/projects"
                       >
                     <button
                       className="button is-success rounded"
@@ -77,7 +77,7 @@ export default function PageLanding () {
                     </button>
                         </Link>
                     
-                    <Link to="portfolio/contact">
+                    <Link to="/contact">
                       <button
                         className="button is-success rounded"
                         onMouseOver={ (ev) => {
